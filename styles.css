@@ -113,5 +113,38 @@ then give it a width and height */
 }
 .grid-cont{
     height: calc(100vh - 3rem - 2rem - 3rem - 3rem);
-    background-color: #F1F1F6;
+    background-color: #E7EDEF;
+    position: relative;
+    overflow: scroll;
+}
+.top-left-dummy-box{
+    height: 2rem;
+    width: 2rem;
+    background-color: #B8C6CC;   
+}
+.address-col-cont{
+    height: 10rem;
+    width: 2rem;
+    background-color: lightblue;
+}
+.address-row-cont{
+    height: 2rem;
+    width: 10rem;
+    background-color: lightcoral;
+    /* arrange according to grid not page -- give grid position relavite */
+}
+.cells-cont{
+    position: absolute;
+    background-color: lightgreen;
+    top: 0;
+    left: 2rem;
+    height: 10rem;
+    width: 10rem;
+}
+.address-col{
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    border: 1px solid #dfe4ea;
+    padding: 0.5rem;
 }
