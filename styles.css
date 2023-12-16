@@ -72,7 +72,7 @@ body{
 }
 .address-bar{
     width: 5rem;
-    height: 70%;
+    text-align: center;
 }
 .function-bar{
     width: calc(100vw - 5rem - 1rem - 1rem - 1rem);
@@ -120,31 +120,52 @@ then give it a width and height */
 .top-left-dummy-box{
     height: 2rem;
     width: 2rem;
-    background-color: #B8C6CC;   
+    background-color: #6C7573;   
+    position: fixed;
+    z-index: 10;
 }
 .address-col-cont{
-    height: 10rem;
-    width: 2rem;
-    background-color: lightblue;
+    position: sticky;
+    top: 2rem; /*  dummybox */
+    left: 0;
 }
 .address-row-cont{
-    height: 2rem;
-    width: 10rem;
-    background-color: lightcoral;
+
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 2rem;
+ 
     /* arrange according to grid not page -- give grid position relavite */
 }
 .cells-cont{
     position: absolute;
-    background-color: lightgreen;
     top: 0;
     left: 2rem;
-    height: 10rem;
-    width: 10rem;
 }
 .address-col{
     height: 2rem;
     width: 2rem;
     text-align: center;
-    border: 1px solid #dfe4ea;
-    padding: 0.5rem;
+    border: 1px solid #CEDADF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.address-row{
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid #CEDADF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row-cont{
+    display: flex;
+}
+.cell{
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid #CEDADF;
+    outline: none;
 }
