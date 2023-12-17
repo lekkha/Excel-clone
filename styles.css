@@ -169,3 +169,15 @@ then give it a width and height */
     border: 1px solid #CEDADF;
     outline: none;
 }
+
+.color-prop{
+    position: relative;
+}
+
+.color-prop > input{
+    position: absolute;
+    opacity: 0;
+    top:0; 
+    left: 0;
+    height: 100%;
+}
