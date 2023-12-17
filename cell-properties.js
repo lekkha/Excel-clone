@@ -50,6 +50,99 @@ bold.addEventListener("click", (e) => {
 
 })
 
+italic.addEventListener("click", (e) => {
+    let address = addressBar.value;
+    let [cell,cellProp]= activeCell(address); 
+
+    //modifications
+    cellProp.italic = !cellProp.italic; //data change 
+    cell.style.fontStyle = cellProp.italic ? "italic" : "normal";  //UI change 
+    italic.style.backgroundColor = cellProp.italic ? activeColorProp : inactiveColorProp;
+
+})
+
+underline.addEventListener("click", (e) => {
+    let address = addressBar.value;
+    let [cell,cellProp]= activeCell(address); 
+
+    //modifications
+    cellProp.underline = !cellProp.underline; 
+    cell.style.textDecoration = cellProp.underline ? "underline" : "normal"; 
+    underline.style.backgroundColor = cellProp.underline ? activeColorProp : inactiveColorProp;
+
+})
+
+fontSize.addEventListener("change", (e) => {
+    let address = addressBar.value;
+    let [cell,cellProp]= activeCell(address); 
+
+    cellProp.fontSize = fontSize.value; 
+    cell.style.fontSize = cellProp.fontSize + "px";  //concatinate so that entire value becomes in px
+    fontSize.value = cellProp.fontSize; //button mein changes
+})
+
+fontFamily.addEventListener("change", (e) =>{
+    let address = addressBar.value; 
+    let [cell, cellProp] = activeCell(address); 
+
+    cellProp.fontFamily = fontFamily.value; 
+    cell.style.fontFamily = cellProp.fontFamily; 
+    fontFamily.value = cellProp.fontFamily;
+})
+
+fontColor.addEventListener("change", (e) => {
+    let address = addressBar.value; 
+    let [cell, cellProp] = activeCell(address); 
+
+    cellProp.fontColor = fontColor.value;
+    cell.style.color = cellProp.fontColor; 
+    fontColor.value = cellProp.fontColor;
+})
+
+BGcolor.addEventListener("change", (e) => {
+    let address = addressBar.value; 
+    let [cell, cellProp] = activeCell(address); 
+
+    cellProp.BGcolor = BGcolor.value;
+    cell.style.backgroundColor = cellProp.BGcolor; 
+    BGcolor.value = cellProp.BGcolor;
+})
+
+//ALIGNMENT 
+alignment.forEach((alignElem) => {
+    alignElem.addEventListener("click", (e) => {
+        let address = addressBar.value; 
+        let [cell, cellProp] = activeCell(address);
+
+        let alignValue = e.target.classList[0]; 
+        cellProp.alignment = alignValue;
+        cell.style.textAlign = cellProp.alignment;
+
+        switch(alignValue){
+            case "left":
+                leftAlign.style.backgroundColor = activeColorProp;
+                rightAlign.style.backgroundColor = inactiveColorProp;
+                centerAlign.style.backgroundColor = inactiveColorProp; 
+                break; 
+
+            case "right":
+                leftAlign.style.backgroundColor = inactiveColorProp;
+                rightAlign.style.backgroundColor = activeColorProp;
+                centerAlign.style.backgroundColor = inactiveColorProp; 
+                break; 
+
+            case "center":
+                leftAlign.style.backgroundColor = inactiveColorProp;
+                rightAlign.style.backgroundColor = inactiveColorProp;
+                centerAlign.style.backgroundColor = activeColorProp; 
+                break;
+
+        }
+
+    })
+
+})
+
 //accessing cell and stroge
 function activeCell(address){
     let [rid, cid] = decodeRIDCIDFromAddress(address); 
@@ -64,4 +157,3 @@ function decodeRIDCIDFromAddress(address){
     let cid = Number(address.charCodeAt(0)) -65; //"A" ->0
     return [rid,cid]; 
 }
- 
