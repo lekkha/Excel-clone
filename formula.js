@@ -37,6 +37,8 @@ formulaBar.addEventListener("keydown", (e) => {
         if(inputFormula !== cellProp.formula) removeChildParent(cellProp.formula); 
         //old formula given in RCP() so that old P-C rel can be traced
 
+        addChildToGraphComponent(inputFormula,address); 
+
         let evaluatedValue = evaluateFormula(inputFormula); 
 
         //after this update db and ui 
@@ -45,6 +47,20 @@ formulaBar.addEventListener("keydown", (e) => {
         updateChildrenCells(address);
     }
 })
+
+//formula -> PCR  //childAddress -> since it has to be decoded 
+function addChildToGraphComponent(formula, childAddress){
+    let [crid, ccid] = decodeRIDCIDFromAddress(childAddress); 
+    let encodedFormula = formula.split(" "); 
+    for(let i=0; i < encodedFormula.length; i++){
+        let asciiValue = encodedFormula[i].charCodeAt(0); 
+        if(asciiValue>=65 && asciiValue<=90){
+            let [prid,pcid] = decodeRIDCIDFromAddress(encodedFormula[i]); 
+            graphComponentMatrix[prid][pcid].push([crid,ccid]); 
+        }
+    }  
+
+}
 
 function updateChildrenCells(parentAddress){
     let [parentCell,parentCellProp] = getCellAndCellProp(parentAddress);
