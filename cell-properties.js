@@ -1,6 +1,12 @@
 //storage
-let collectedSheetDB =[]
-// let sheetDB = [];
+let collectedSheetDB = []
+let sheetDB = []; 
+
+{
+    let addSheetButton = document.querySelector(".sheet-add-icon");
+    addSheetButton.click();
+}
+
 // for (let i = 0; i < rows; i++) {
 //     let sheetRow = [];
 //     for (let j = 0; j < cols; j++) {
@@ -149,7 +155,7 @@ alignment.forEach((alignElem) => {
 
 
 let allCells = document.querySelectorAll(".cell");
-for (let i = 0;i < allCells.length;i++) {
+for (let i = 0; i < allCells.length; i++) {
     addListenerToAttachCellProperties(allCells[i]);
 }
 
@@ -169,7 +175,7 @@ function addListenerToAttachCellProperties(cell) {
         cell.style.color = cellProp.fontColor;
         cell.style.backgroundColor = cellProp.BGcolor === "#000000" ? "transparent" : cellProp.BGcolor; //agar balck hai to transparent laga dena varna bgcolor lagadena 
         cell.style.textAlign = cellProp.alignment;
-                
+
 
         // Apply properties UI Props container
         bold.style.backgroundColor = cellProp.bold ? activeColorProp : inactiveColorProp;
@@ -179,7 +185,7 @@ function addListenerToAttachCellProperties(cell) {
         BGcolor.value = cellProp.BGcolor;
         fontSize.value = cellProp.fontSize;
         fontFamily.value = cellProp.fontFamily;
-        switch(cellProp.alignment) { // UI change (2)
+        switch (cellProp.alignment) { // UI change (2)
             case "left":
                 leftAlign.style.backgroundColor = activeColorProp;
                 centerAlign.style.backgroundColor = inactiveColorProp;
@@ -199,7 +205,7 @@ function addListenerToAttachCellProperties(cell) {
 
         let formulaBar = document.querySelector(".function-bar");
         formulaBar.value = cellProp.formula;
-        cell.value = cellProp.value; 
+        cell.innerText = cellProp.value;
 
     })
 }

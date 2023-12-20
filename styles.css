@@ -118,6 +118,7 @@ then give it a width and height */
 
 .sheet-content{
     width: 5rem;
+    text-align: center;
 }
 
 .sheet-add-icon{
