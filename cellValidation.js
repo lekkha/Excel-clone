@@ -38,14 +38,15 @@ function isGraphCyclic(graphComponentMatrix){
             if(visited[i][j] === false){
                 let response =  dfsCycleDetection(graphComponentMatrix, i, j, visited, dfsVisited);
                 //cycle detected, no need to exp further
-                if(response === true ) return true; 
+                if(response === true ) return [i,j];
+                //return i,j --> source point of cycle formation --> to begiven to cycPthTr  
 
             }
 
         }
     }
 
-    return false; 
+    return null; 
 }
 
 //detects cycle
