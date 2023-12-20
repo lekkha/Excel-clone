@@ -38,6 +38,15 @@ formulaBar.addEventListener("keydown", (e) => {
         //old formula given in RCP() so that old P-C rel can be traced
 
         addChildToGraphComponent(inputFormula,address); 
+        //Check formula is cyclic or not then only evaluate 
+        //true->cycle false-> not cyclic
+        let isCyclic = isGraphCyclic(graphComponentMatrix);
+        if(isCyclic === true){
+            alert("Your Formula is Cyclic");
+            //if cycle detected break relationship 
+            removeChildFromGraphComponent(inputFormula,address);
+            return; 
+        }
 
         let evaluatedValue = evaluateFormula(inputFormula); 
 
@@ -59,6 +68,20 @@ function addChildToGraphComponent(formula, childAddress){
             graphComponentMatrix[prid][pcid].push([crid,ccid]); 
         }
     }  
+
+}
+
+function removeChildFromGraphComponent(formula, childAddress){
+    let [crid, ccid] = decodeRIDCIDFromAddress(childAddress); 
+    let encodedFormula = formula.split(" ");
+    for(let i=0; i< encodedFormula.length; i++){
+        let asciiValue = encodedFormula[i].charCodeAt(0); 
+        if(asciiValue>=65 && asciiValue<=90){
+            let[prid, pcid] = decodeRIDCIDFromAddress(encodedFormula[i]); 
+            //ek formula ko add karte hi relation estb hua tha -- pop last wale ko hi del kardeta hai 
+            graphComponentMatrix[prid][pcid].pop(); 
+        }
+    }
 
 }
 
