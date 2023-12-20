@@ -101,18 +101,31 @@ then give it a width and height */
     width: 5rem;
     height: 1rem;
     height: 80%;
-    width: calc(100vw - 2vw)
+    width: calc(100vw - 2vw);
+    overflow: auto;
 }
 
 .sheet-folder{
+    height: 80%;
     text-decoration: underline;
     font-size: 0.9rem;
     font-weight: bold;
     text-decoration-thickness: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sheet-content{
+    width: 5rem;
 }
 
 .sheet-add-icon{
     width: 2vw;
+}
+
+.sheet-add-icon :hover{
+    cursor: default;
 }
 .grid-cont{
     height: calc(100vh - 3rem - 2rem - 3rem - 3rem);
