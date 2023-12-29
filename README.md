@@ -1,14 +1,23 @@
 # ExcelPro: Professional Excel Clone with JavaScript, HTML, and CSS
 
+# Excel Clone
+
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://an-excel-clone.netlify.app/)
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![JavaScript](https://img.shields.io/badge/javascript-vanilla-yellow.svg)
+![HTML5](https://img.shields.io/badge/html5-orange.svg)
+![CSS3](https://img.shields.io/badge/css3-blue.svg)
+
 ## Description
 
 Welcome to ExcelPro, a meticulously crafted Excel clone developed using **vanilla JavaScript, HTML, and CSS**. This project represents a dedication to excellence in web development, combining powerful features with a user-friendly interface.
 
-## Tech Stack
+## Technologies Used
 
-- **JavaScript**
-- **HTML**
-- **CSS**
+- **JavaScript:** ![Vanilla JS](https://img.shields.io/badge/javascript-vanilla-yellow.svg)
+- **HTML5:** ![HTML5](https://img.shields.io/badge/html5-orange.svg)
+- **CSS3:** ![CSS3](https://img.shields.io/badge/css3-blue.svg)
 
 ## Key Features
 
@@ -31,9 +40,14 @@ Unlock the potential of advanced formulas powered by a sophisticated Graph algor
 Enhance data precision with ExcelPro's formula cycle detection feature. Immediate alerts and pinpointed cycle locations prevent errors, providing a reliable foundation for critical calculations.
 
 ### ➡️ Formula Bar Space Formatting
-When entering formulas in the formula bar, add spaces for better readability. For example:
+When entering formulas in the formula bar, add spaces. For example:
 - `( A1 + 10 )`
 - `( A1 + B1 )`
+
+## Demo
+
+Try the live demo: [Excel Clone Demo](https://an-excel-clone.netlify.app/)
+
 
 ## Working of the Project
 
@@ -74,7 +88,7 @@ When entering formulas in the formula bar, add spaces for better readability. Fo
    - If a cycle is formed while updating cells using a formula, the system provides immediate alerts, highlighting the location of the cycle.
 
 ### 10. **Formula Bar Space Formatting:**
-   - Users are encouraged to add spaces for better readability when entering formulas in the formula bar.
+   - Users are encouraged to add spaces when entering formulas in the formula bar.
 
 ### 11. **User Experience (UX):**
    - The project focuses on providing a seamless and intuitive user experience.
