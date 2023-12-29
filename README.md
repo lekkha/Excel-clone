@@ -1,5 +1,3 @@
-# ExcelPro: Professional Excel Clone with JavaScript, HTML, and CSS
-
 # Excel Clone
 
 [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://an-excel-clone.netlify.app/)
