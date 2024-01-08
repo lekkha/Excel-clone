@@ -19,25 +19,25 @@ Welcome to ExcelPro, a meticulously crafted Excel clone developed using **vanill
 
 ## Key Features
 
-### 📂 Multiple Sheets Management
+### Multiple Sheets Management
 Effortlessly organize your data with the ability to create and manage multiple sheets. ExcelPro provides a sophisticated platform for seamless sheet navigation and manipulation.
 
-### 🎨 Cell Customization
+### Cell Customization
 Tailor each cell to your precise specifications. ExcelPro empowers users with advanced customization options, ensuring a personalized and efficient workspace.
 
-### ✂️ Copy, Cut, and Paste Operations
+### Copy, Cut, and Paste Operations
 Optimize your workflow with intuitive copy, cut, and paste functionalities. Move data seamlessly within and across sheets, mirroring the familiar actions of industry-standard spreadsheet applications.
 
-### 📥 Download and 📤 Upload Sheets
+### Download and Upload Sheets
 Experience true mobility by downloading and uploading sheets at your convenience. Share your work effortlessly and safeguard your data with secure upload capabilities.
 
-### 🧮 Advanced Formulas with Graph Algorithm
+### Advanced Formulas with Graph Algorithm
 Unlock the potential of advanced formulas powered by a sophisticated Graph algorithm. ExcelPro dynamically updates formulas, ensuring accuracy and efficiency even after copy/cut pasting.
 
-### 🔄 Formula Cycle Detection
+### Formula Cycle Detection
 Enhance data precision with ExcelPro's formula cycle detection feature. Immediate alerts and pinpointed cycle locations prevent errors, providing a reliable foundation for critical calculations.
 
-### ➡️ Formula Bar Space Formatting
+### Formula Bar Space Formatting
 When entering formulas in the formula bar, add spaces. For example:
 - `( A1 + 10 )`
 - `( A1 + B1 )`
